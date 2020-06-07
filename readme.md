@@ -1,7 +1,7 @@
 # **Coffee Shop**
 
-1. [Backend Demo]()
-2. [Frontend Demo]()
+1. [Backend Demo](#)
+2. [Frontend Demo](#)
 
 ___
 ## **Background**
@@ -21,4 +21,4 @@ Setup the configuration for MongoDB Atlas
 ___
 ## License
 
-[© Danny Y. Yen - May 17 2020](../LICENSE)
+[© Danny Y. Yen - June 8 2020](../LICENSE)
