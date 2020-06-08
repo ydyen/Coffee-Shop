@@ -1,9 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const employee = require('./models/employee');
+
+//import mongoose, connect here
 
 //staffs information
 router.get('/', (req, res, next) => {
     res.send('This is the Home page')
+
+    //show data hereß
+    console.log(employee);
 })
 
 // Read menu items
