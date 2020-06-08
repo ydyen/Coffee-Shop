@@ -1,8 +1,11 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
-app.use('/', (req, res, next) =>{
-    res.send('Hello World');
-});
+//middlewares
+app.use(express.static(path.join(__dirname, 'public')));
+const router = require('./public/routes/route')
+
+app.use('/', router);
 
 module.exports = app;
