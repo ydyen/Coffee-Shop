@@ -1,0 +1,26 @@
+[	
+	{
+	"first_name": "Lisa",
+	"last_name": "Kudrow",
+	"title": "Manager",
+	"experience": "7"
+	},
+	{
+	"first_name": "Monica",
+	"last_name": "Brown",
+	"title": "Chef",
+	"experience": "10"
+	},
+	{
+	"first_name": "Rachel",
+	"last_name": "Green",
+	"title": "Hostess",
+	"experience": "3"
+	},
+	{
+	"first_name": "Ross",
+	"last_name": "Brown",
+	"title": "Server",
+	"experience": "1"
+	}
+]

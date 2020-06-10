@@ -1,16 +1,39 @@
 const express = require('express');
 const router = express.Router();
-const employee = require('./models/employee');
 
-//import mongoose, connect here
+Employee = require('./models/employee');
+Genre = require('./models/genre')
 
-//staffs information
+//employee information
 router.get('/', (req, res, next) => {
-    res.send('This is the Home page')
-
-    //show data hereß
-    console.log(employee);
+    try{
+        Employee.getEmployees((err, employees) =>{
+            if(err) {
+                res.sendStatus('401 ' + err) 
+                next()   
+            }
+            res.json(employees);
+        })
+    }catch(err) {
+        if(err) throw err;
+    }
 })
+
+//Add new employee
+router.post('/', (req, res, next) => {
+    try{
+        const employees = req.body;
+        Employee.addEmployee(employees, (err, employees) =>{
+            if(err) {
+                res.sendStatus(404).send('Not Found ' + err)
+                next()
+            }
+            res.json(employees);
+        })
+    }catch(err) {
+        if(err) throw err;
+    }
+});
 
 // Read menu items
 router.get('/menu', (req, res, next) => {
@@ -18,10 +41,7 @@ router.get('/menu', (req, res, next) => {
 
 });
 
-//Add menu items
-router.post('/menu', (req, res, next) => {
 
-});
 
 //Update menu items
 router.put('/menu/:id', (req, res, next) => {
