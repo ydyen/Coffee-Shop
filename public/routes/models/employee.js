@@ -29,11 +29,16 @@ module.exports.addEmployee = (employees, callback) => {
 module.exports.updateEmployee = (id, employees, options, callback) => {
     const query = {_id: id};
     const update = {
-        name: employees.first_name,
-        name: employees.last_name,
-        name: employees.title,
-        name: employees.experience,
+        first_name: employees.first_name,
+        last_name: employees.last_name,
+        title: employees.title,
+        experience: employees.experience,
     };
     Employee.findOneAndUpdate(query, update, options, callback);
 }
 
+//delete employee
+module.exports.deleteEmployee = (id, callback) => {
+    const query = {_id: id};
+    Employee.remove(query, callback);
+}

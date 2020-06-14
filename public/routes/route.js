@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
+//mongoose schemas
 Employee = require('./models/employee');
 Genre = require('./models/genre')
 
-//employee information
+//Read all employees information
 router.get('/', (req, res, next) => {
     try{
         Employee.getEmployees((err, employees) =>{
@@ -35,22 +36,31 @@ router.post('/', (req, res, next) => {
     }
 });
 
-// Read menu items
-router.get('/menu', (req, res, next) => {
-    res.send('This is the menu page')
-
-});
-
-
-
-//Update menu items
-router.put('/menu/:id', (req, res, next) => {
-    res.send('This is the update menu item page')
+//Update an employee
+router.put('/:id', (req, res, next) => {
+    try{
+        const id = req.params.id;
+        const employees = req.body;
+        Employee.updateEmployee(id, employees,  {}, (err, employees) =>{
+            if(err) throw err;
+            res.json(employees);
+        })
+    }catch(err) {
+        if(err) throw err;
+    }
 });
 
 //Delete menu items
-router.delete('/menu/:id', (req, res, next) => {
-    res.send('This is the delete menu item page')
+router.delete('/:id', (req, res, next) => {
+    try{
+        const id = req.params.id;
+        Employee.deleteEmployee(id, (err, employees) =>{
+            if(err) throw err;
+            res.send("Success: 1 Deleted");
+        })
+    }catch(err) {
+        if(err) throw err;
+    }
 });
 
 module.exports = router;
