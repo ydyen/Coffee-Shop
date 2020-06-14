@@ -72,10 +72,7 @@ router.delete('/:id', (req, res, next) => {
 router.get('/menu', (req, res, next) => {
     try {
         Menu.getmenu((err, menu) => {
-            if (err) {
-                res.sendStatus('401 ' + err)
-                next()
-            }
+            if (err) throw err;
             res.json(menu);
         })
     } catch (err) {
