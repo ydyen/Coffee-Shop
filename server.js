@@ -6,22 +6,15 @@ const mongoose = require('mongoose');
 const uri = require('./db/setting');
 
 //Connection to Database
-async function main() {
-    try {
-        mongoose.connect(uri, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        },
-            (err, callback) => {
-                if (err) throw err;
-                console.log("**** Database Connected **** ")
-            });
-    } catch (e) {
-        console.error(e);
-    } 
-}
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+},
+    (err, callback) => {
+        if (err) throw err;
+        console.log("**** Database Connected **** ")
+    });
 
-main().catch(console.error);
 
 server.listen(port, () => {
     console.log("server running on " + port)
