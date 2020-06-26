@@ -5,6 +5,7 @@ const menuSchema = mongoose.Schema({
     name: String,
     price: String,
     description: String,
+    img_url: String,
     create_date: {
         type: Date,
         default: Date.now,
@@ -23,13 +24,14 @@ module.exports.addmenu = (menus, callback) => {
     Menu.create(menus, callback);
 }
 
-//Update menu
+//Update menunpx
 module.exports.updatemenu = (id, menus, options, callback) => {
     const query = {_id: id};
     const update = {
         name: menus.name,
         price: menus.price,
         description: menus.description,
+        img_url: menus.img_url
     };
     Menu.findOneAndUpdate(query, update, options, callback);
 }

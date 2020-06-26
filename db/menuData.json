@@ -2,21 +2,26 @@
 		{
 		"name": "Coffee & Croissant",
 		"price": "8",
-		"description": "This menu comes with 1 large coffee and 2 croissants. The coffe beans are grown in Italy from the best ingredients. The croissant is delivered from France and is baked fresh everyday with a light touch of white cheese. "
-		},
+		"description": "This menu comes with 1 large coffee and 2 croissants. The coffe beans are grown in Italy from the best ingredients. The croissant is delivered from France and is baked fresh everyday with a light touch of white cheese. ",
+		"img_url": ""	
+	},
 		{
 		"name": "Coffee & Bagel",
 		"price": "8",
-		"description": "This menu comes with a medium size coffee and bagel sandwich. You can choose between our caramel coffee with milk or mocha latte expresso. The bagel sandwich includes eggs, bacon and cheddar cheese."
-		},
+		"description": "This menu comes with a medium size coffee and bagel sandwich. You can choose between our caramel coffee with milk or mocha latte expresso. The bagel sandwich includes eggs, bacon and cheddar cheese.",
+		"img_url": ""
+	},
 		{
 		"name": "Wakeup Call",
 		"price": "10",
-		"description": "This menu comes with 2 shots of expresso and chicken wrap."
-		},
+		"description": "This menu comes with 2 shots of expresso and chicken wrap.",
+		"img_url": ""
+
+	},
 		{
 		"name": "Kids Meal",
 		"price": "4",
-		"description": "This menu comes with an orange juice or milk and a bagel with a choice of cream cheese or butter"
-		}
+		"description": "This menu comes with an orange juice or milk and a bagel with a choice of cream cheese or butter",
+		"img_url": ""
+	}
 	]

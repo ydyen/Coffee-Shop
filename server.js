@@ -3,9 +3,14 @@ const port = process.env.PORT || 3000;
 const app = require('./app');
 const server = http.createServer(app);
 const mongoose = require('mongoose');
-const uri = require('./db/setting');
+
 
 //Connection to Database
+const uri = require('./config');
+
+//process.env.uri is the secret access link to mongo db uri code
+let heroku_uri = process.env.uri;
+
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true

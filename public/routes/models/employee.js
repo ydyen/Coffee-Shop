@@ -5,6 +5,7 @@ const employeeSchema = mongoose.Schema({
     first_name: String,
     last_name: String,
     title: String,
+    img_url: String,
     experience: String,
     create_date: {
         type: Date,
@@ -12,6 +13,7 @@ const employeeSchema = mongoose.Schema({
     },
     
 });
+
 
 const Employee = module.exports = mongoose.model('Employee', employeeSchema);
 
@@ -33,6 +35,7 @@ module.exports.updateEmployee = (id, employees, options, callback) => {
         last_name: employees.last_name,
         title: employees.title,
         experience: employees.experience,
+        img_url: employees.img_url
     };
     Employee.findOneAndUpdate(query, update, options, callback);
 }

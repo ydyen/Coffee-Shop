@@ -3,24 +3,30 @@
 	"first_name": "Lisa",
 	"last_name": "Kudrow",
 	"title": "Manager",
-	"experience": "7"
+	"experience": "7",
+	"img_url": ""
 	},
 	{
 	"first_name": "Monica",
 	"last_name": "Brown",
 	"title": "Chef",
-	"experience": "10"
+	"experience": "10",
+	"img_url": ""
+
 	},
 	{
 	"first_name": "Rachel",
 	"last_name": "Green",
 	"title": "Hostess",
-	"experience": "3"
+	"experience": "3",
+	"img_url": ""
+
 	},
 	{
 	"first_name": "Ross",
 	"last_name": "Brown",
 	"title": "Server",
-	"experience": "1"
+	"experience": "1",
+	"img_url": ""
 	}
 ]
