@@ -11,7 +11,7 @@ const uri = require('./config');
 //process.env.uri is the secret access link to mongo db uri code
 let heroku_uri = process.env.uri;
 
-mongoose.connect(uri, {
+mongoose.connect(heroku_uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 },
