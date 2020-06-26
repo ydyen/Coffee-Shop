@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 //Connection to Database
 const uri = require('./config');
 
-mongoose.connect(heroku_uri, {
+mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 },
